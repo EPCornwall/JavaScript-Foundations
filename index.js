@@ -128,15 +128,15 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 */
 
 function variableInterestRate(P, I ,N){
-    var i =[];
-    for  (i=(I-0.02); i < (I+0.02); i + 0.005) {
+    var i;
+    for  (i=(I-0.02); i < (I+0.02); i += 0.005) {
         let n1=(1+[i]/12)**(N*12);
         let numerator = ([i]/12)*n1;
         let denominator = n1-1;
-        return name + ", with an interest rate of "+ i+", your monthly rate is $" + P*numerator/denominator;
+        console.log( name + ", with an interest rate of "+ i+", your monthly rate is $" + P*numerator/denominator);
     } ;  
 };
-console.log(variableInterestRate(200000,0.04,30));
+variableInterestRate(200000,0.04,30);
 
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//
 
